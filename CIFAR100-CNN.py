@@ -253,7 +253,7 @@ elif Train_type == 2:
         count = 0
         for child in model.children():
             count += 1
-            if count < 9: # Experimenting with 9, used 8 before!
+            if count < 9: # Experimenting with 9, used 8 before so yeah
                 for param in child.parameters():
                     param.requires_grad = False
         model.fc = Classifier
