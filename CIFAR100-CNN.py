@@ -23,7 +23,7 @@ device = torch.device('cuda')
 # These are the variables that will be changed
 learning_rate = 1e-4 #1e-3
 batch_size = 10 # 10
-num_epochs = 50 # 20
+num_epochs = 50 # (x % 4 = 0)
 Trained_Model = 1  # ResNet50, VGG16, InceptionV3 (1-3)
 Train_type = 1 # Train whole Model, Train w/ Freeze, Train w/ Freeze then Unfreeze  (1-3)
 
@@ -33,6 +33,7 @@ Train_type = 1 # Train whole Model, Train w/ Freeze, Train w/ Freeze then Unfree
 if (Trained_Model == 1):
     model = models.resnet50(weights=models.ResNet50_Weights.DEFAULT)
     model.to(device)
+    # Transformations applied to the training set are often randomized to reduce over-fitting
     transform = transforms.Compose([
         transforms.Resize(232),
         transforms.RandomCrop(224, pad_if_needed=True),
@@ -41,12 +42,14 @@ if (Trained_Model == 1):
         transforms.ToTensor(),
         transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
     ])
+    # Transformations applied to the test set aren't changed, this is just moving it to a format the model can understand
     transform_test = transforms.Compose([
         transforms.Resize(232),
         transforms.CenterCrop(224),
         transforms.ToTensor(),
         transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
     ])
+    # Adding onto the model
     Classifier = nn.Sequential(
         nn.Linear(2048, 1000),
         nn.ReLU(),
@@ -240,33 +243,38 @@ def Train(num_epoch):
         print("")
         
 
-if Train_type == 1:
+if Train_type == 1: # Before training, declare CrossEntropyLoss and Adam along with any learning rate at the time
     crit = nn.CrossEntropyLoss()
     optimizer = optim.Adam(model.parameters(), lr=learning_rate)
     Train(num_epoch=num_epochs)
     
 elif Train_type == 2:
-    if Trained_Model == 2:
-        model.classifier[6] = Classifier
-        
-    elif Trained_Model == 1:
+    if Trained_Model == 1: # For ResNet50
         count = 0
         for child in model.children():
             count += 1
-            if count < 8:
+            if count < 9: # Experimenting with 9, used 8 before!
                 for param in child.parameters():
                     param.requires_grad = False
         model.fc = Classifier
         
-    elif Trained_Model == 3:
+    elif Trained_Model == 2: # For VGG16
+        count = 0
+        for param in model.parameters():
+            count += 1
+            if count < 28:
+                param.requires_grad = False
+        model.classifier[6] = Classifier
+        
+    elif Trained_Model == 3: # For InceptionV3
         model.fc = Classifier
         
     print("Model Frozen, Training Fewer Layers")
-    
     crit = nn.CrossEntropyLoss()
     optimizer = optim.Adam(model.parameters(), lr=learning_rate)
     epochs = (num_epochs * (1/4))
     Train(num_epoch=epochs)
+    
 elif Train_type == 3:
         
     if Trained_Model == 1:
@@ -289,7 +297,8 @@ elif Train_type == 3:
     crit = nn.CrossEntropyLoss()
     optimizer = optim.Adam(model.parameters(), lr=learning_rate)
 
-    Train(num_epoch=num_epochs)
+    epochs = (num_epochs * (3/4))
+    Train(num_epoch=epochs)
     
     # Unfreeze the whole model and retrain with a lower training rate
     for child in model.children():
