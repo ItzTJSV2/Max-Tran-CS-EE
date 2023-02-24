@@ -1,0 +1,101 @@
+Files already downloaded and verified
+Files already downloaded and verified
+Epoch 1/23: Accuracy [Used, Training, Test]: 31.94% / 50.51% / 48.10% | Loss Avg: 2.700
+Time: 0 Hours, 15 Minutes, 27.54 Seconds | Epoch 1
+Checkpoint Saved.
+
+Epoch 2/23: Accuracy [Used, Training, Test]: 53.99% / 64.17% / 58.66% | Loss Avg: 1.664
+Time: 0 Hours, 15 Minutes, 26.33 Seconds | Epoch 2
+Checkpoint Saved.
+
+Epoch 3/23: Accuracy [Used, Training, Test]: 63.98% / 72.85% / 62.64% | Loss Avg: 1.271
+Time: 0 Hours, 15 Minutes, 27.91 Seconds | Epoch 3
+Checkpoint Saved.
+
+Epoch 4/23: Accuracy [Used, Training, Test]: 70.73% / 79.24% / 65.87% | Loss Avg: 1.003
+Time: 0 Hours, 15 Minutes, 22.50 Seconds | Epoch 4
+Checkpoint Saved.
+
+Epoch 5/23: Accuracy [Used, Training, Test]: 76.74% / 84.83% / 67.43% | Loss Avg: 0.780
+Time: 0 Hours, 15 Minutes, 21.93 Seconds | Epoch 5
+Checkpoint Saved.
+
+Epoch 6/23: Accuracy [Used, Training, Test]: 81.96% / 89.71% / 68.87% | Loss Avg: 0.594
+Time: 0 Hours, 15 Minutes, 21.80 Seconds | Epoch 6
+Checkpoint Saved.
+
+Epoch 7/23: Accuracy [Used, Training, Test]: 86.42% / 93.35% / 69.49% | Loss Avg: 0.444
+Time: 0 Hours, 15 Minutes, 22.36 Seconds | Epoch 7
+Checkpoint Saved.
+
+Epoch 8/23: Accuracy [Used, Training, Test]: 89.68% / 95.28% / 69.73% | Loss Avg: 0.330
+Time: 0 Hours, 15 Minutes, 22.43 Seconds | Epoch 8
+Checkpoint Saved.
+
+Epoch 9/23: Accuracy [Used, Training, Test]: 92.26% / 96.38% / 70.38% | Loss Avg: 0.251
+Time: 0 Hours, 15 Minutes, 21.72 Seconds | Epoch 9
+Checkpoint Saved.
+
+Epoch 10/23: Accuracy [Used, Training, Test]: 93.65% / 97.13% / 69.91% | Loss Avg: 0.202
+Time: 0 Hours, 15 Minutes, 21.07 Seconds | Epoch 10
+Checkpoint Saved.
+
+Epoch 11/23: Accuracy [Used, Training, Test]: 94.78% / 97.93% / 70.46% | Loss Avg: 0.171
+Time: 0 Hours, 15 Minutes, 21.49 Seconds | Epoch 11
+Checkpoint Saved.
+
+Epoch 12/23: Accuracy [Used, Training, Test]: 95.45% / 97.75% / 69.84% | Loss Avg: 0.146
+Time: 0 Hours, 15 Minutes, 20.63 Seconds | Epoch 12
+Checkpoint Saved.
+
+Epoch 13/23: Accuracy [Used, Training, Test]: 96.17% / 98.31% / 70.31% | Loss Avg: 0.124
+Time: 0 Hours, 15 Minutes, 20.95 Seconds | Epoch 13
+Checkpoint Saved.
+
+Epoch 14/23: Accuracy [Used, Training, Test]: 96.42% / 98.16% / 69.85% | Loss Avg: 0.115
+Time: 0 Hours, 15 Minutes, 20.41 Seconds | Epoch 14
+Checkpoint Saved.
+
+Epoch 15/23: Accuracy [Used, Training, Test]: 96.82% / 98.54% / 69.92% | Loss Avg: 0.103
+Time: 0 Hours, 15 Minutes, 22.47 Seconds | Epoch 15
+Checkpoint Saved.
+
+Epoch 16/23: Accuracy [Used, Training, Test]: 97.28% / 98.55% / 70.50% | Loss Avg: 0.089
+Time: 0 Hours, 15 Minutes, 21.18 Seconds | Epoch 16
+Checkpoint Saved.
+
+Epoch 17/23: Accuracy [Used, Training, Test]: 97.25% / 96.61% / 67.78% | Loss Avg: 0.089
+Time: 0 Hours, 15 Minutes, 21.69 Seconds | Epoch 17
+Checkpoint Saved.
+
+Epoch 18/23: Accuracy [Used, Training, Test]: 97.52% / 98.87% / 70.01% | Loss Avg: 0.081
+Time: 0 Hours, 15 Minutes, 23.22 Seconds | Epoch 18
+Checkpoint Saved.
+
+Epoch 19/23: Accuracy [Used, Training, Test]: 97.80% / 99.23% / 71.40% | Loss Avg: 0.074
+Time: 0 Hours, 15 Minutes, 20.20 Seconds | Epoch 19
+Checkpoint Saved.
+
+Epoch 20/23: Accuracy [Used, Training, Test]: 97.80% / 99.02% / 69.97% | Loss Avg: 0.073
+Time: 0 Hours, 15 Minutes, 25.31 Seconds | Epoch 20
+Checkpoint Saved.
+
+Epoch 21/23: Accuracy [Used, Training, Test]: 97.83% / 98.98% / 70.39% | Loss Avg: 0.069
+Time: 0 Hours, 15 Minutes, 22.22 Seconds | Epoch 21
+Checkpoint Saved.
+
+Epoch 22/23: Accuracy [Used, Training, Test]: 98.16% / 99.08% / 70.36% | Loss Avg: 0.060
+Time: 0 Hours, 15 Minutes, 19.14 Seconds | Epoch 22
+Checkpoint Saved.
+
+Epoch 23/23: Accuracy [Used, Training, Test]: 98.17% / 99.41% / 70.16% | Loss Avg: 0.058
+Time: 0 Hours, 15 Minutes, 20.68 Seconds | Epoch 23
+Checkpoint Saved.
+
+
+Training Completed!
+Time for Whole Training: 5 Hours, 53 Minutes, 44.38 Seconds
+
+Final Accuracy:
+Training Set: 0.99% | Testing Set: 0.70%
+CSV Completed.
