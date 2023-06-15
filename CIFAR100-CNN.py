@@ -25,9 +25,9 @@ frozen = False
 # In order to stop the training early, do CTRL+C
 learning_rate = 1e-5 #1e-5
 batch_size = 10 # 10
-num_epochs = 100 # 100 / 300
-Trained_Model = 2  # ResNet50, VGG16, InceptionV3 (1-3)
-Train_type = 2 # Train whole Model with no Weights, Train w/ Freeze, Train w/ Freeze then Unfreeze  (1-3)
+num_epochs = 300 # 100 / 300
+Trained_Model = 1  # ResNet50, VGG16, InceptionV3 (1-3)
+Train_type = 1 # Train whole Model with no Weights, Train w/ Freeze, Train w/ Freeze then Unfreeze  (1-3)
 
 ContinueTrain = False
 
